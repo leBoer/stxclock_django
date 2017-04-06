@@ -79,11 +79,12 @@ WSGI_APPLICATION = 'stxclock_django.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'HOST': 'db',
-        'PORT': 5432,
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'stxclock',
+        'USER': 'christian',
+        'PASSWORD': 'passdellbatman',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
@@ -128,4 +129,5 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, "static/")
+# STATIC_URL = '/static/'
